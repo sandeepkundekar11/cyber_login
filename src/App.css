@@ -1,38 +1,238 @@
-.App {
-  text-align: center;
+*{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+.timer
+{
+    width: 250px;
+    text-align: center;
+    /* border: solid black 2px; */
+    color: white;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.timer>p 
+{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+@media (max-width:400px) {
+    .timer>p 
+{
+    font-size: 1rem;
+    font-weight: bold;
+}
+}
+.box
+{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+.form
+{
+    width: 260px;
+    height: 260px;
+    margin: auto;
+    border: solid white 6px;
+    display: flex;
+    border-radius: 50%;
+    background-color: black;
+    flex-direction: column;
+    z-index: 100;
+
+}
+.animation
+{
+    
+    margin: auto;
+    height: 290px;
+    width: 280px;
+    display: flex;
+    border-radius: 50%;
+    justify-items:center;
+    align-items: center;
+    z-index: 11;
+    animation: clock;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+@keyframes clock {
+   0%
+   {
+    width: 280px;
+    background: conic-gradient(rgb(145, 145, 145) 0deg,transparent 0deg);
+    box-shadow: -230x 40px -40px 30px  rgb(0 0 0/0.2);
+   } 
+   10%
+   {
+    width: 280px;
+    background: conic-gradient(white 36deg,transparent 0deg);
+    box-shadow: -230x 40px -40px 30px  rgb(0 0 0/0.2);
+   }
+   20%
+   {
+    width: 280px;
+    background: conic-gradient(rgb(145, 145, 145) 72deg,transparent 0deg);
+    box-shadow: -230x 40px -40px 30px  rgb(0 0 0/0.2);
+   }
+   30%
+   {
+    width: 280px;
+    background: conic-gradient(white 108deg,transparent 0deg);
+    box-shadow: -230x 40px -40px 30px  rgb(0 0 0/0.2);
+   }
+   40%
+   {
+    width: 280px;
+    background: conic-gradient(rgb(145, 145, 145) 144deg,transparent 0deg);
+    box-shadow: -230x 40px -40px 30px  rgb(0 0 0/0.2);
+   }
+   50%
+   {
+    width: 280px;
+    background: conic-gradient(white 180deg,transparent 0deg);
+    bbox-shadow: -230x 40px -40px 30px  rgb(0 0 0/0.2);
+   }
+   60%
+   {
+    width: 280px;
+    background: conic-gradient(rgb(145, 145, 145) 216deg,transparent 0deg);
+    box-shadow:-230x043px -40px 30px  rgb(0 0 0/0.2);
+   }
+   70%
+   {
+    width: 280px;
+    background: conic-gradient(white 252deg,transparent 0deg);
+    box-shadow:-230x043px -40px 30px  rgb(0 0 0/0.2);
+   }
+   80%
+   {
+    width: 280px;
+    background: conic-gradient(white 288deg,transparent 0deg);
+    box-shadow: -230x 40px -40px 30px  rgb(0 0 0/0.2);
+   }
+   90%
+   {
+    width: 280px;
+    background: conic-gradient(rgb(145, 145, 145) 324deg,transparent 0deg);
+    box-shadow: -230x 40px -40px 30px  rgb(0 0 0/0.2);
+   } 
+   100%
+   {
+    width: 280px;
+    background: conic-gradient(rgb(145, 145, 145)360deg,transparent 0deg);
+    box-shadow: -230x 40px -40px 30px  rgb(0 0 0/0.2);
+   } 
+
+}
+.box1
+{
+    width: 50vw;
+    height: 100vh;
+    margin-right: -10rem;
+    border-right: solid white 3px;
+    background: url('../src/imges/left.jpg') no-repeat center center/cover;
+}
+.box2
+{
+    width: 50vw;
+    height: 100vh;
+    background:url("../src/imges/right.jpg") no-repeat center center/cover;
+    z-index: 1;
+    border-left: solid white 3px;
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+    margin-left: -10rem; 
+   
+}
+.box11
+{
+    animation-name: slide1;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+.box22
+{
+    animation-name: slide2;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@keyframes slide1 {
+    20%
+    {
+        margin-right: -4rem;
+    }
+    40%
+    {
+        margin-right: 20vw;
+    }
+    60%
+    {
+        margin-right: 40vw;
+    }
+    80%
+    {
+        margin-right: 70vw;
+    }
+    100%
+    {
+        margin-right: 110vw;
+    }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@keyframes slide2 {
+    20%
+    {
+        margin-left: -4rem;
+    }
+    40%
+    {
+        margin-left: 20vw;
+    }
+    60%
+    {
+        margin-left: 40vw;
+    }
+    80%
+    {
+        margin-left: 70vw;
+    }
+    100%
+    {
+        margin-left: 110vw;
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.inner_lab
+{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    background:url("../src/imges/lab.jpg") no-repeat center center/cover;
 }
-
-.App-link {
-  color: #61dafb;
+.default_app
+{
+    position: absolute;
+    top: 0.1%;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:111;
+    flex-direction: column;
+    background:url('../src/imges/time_out.png')no-repeat center center/cover;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input
+{
+    outline: none;
 }
